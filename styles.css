@@ -1,0 +1,268 @@
+/* styles.css */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9fbfe;
+  color: #212529;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #0061a8 !important;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #004e92, #000428);
+  color: white;
+  padding: 80px 0;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.hero p.lead {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+
+.hero .btn {
+  background-color: #f9c846;
+  color: #212529;
+  font-weight: 600;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #e5b100;
+}
+
+/* Large Icons */
+.icon-large {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: #0061a8;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Subject List */
+.list-group-item {
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  border: none;
+  padding: 12px 20px;
+}
+
+/* Subjects Section */
+.subjects {
+  background-color: #f0f8ff;
+}
+
+/* Headings */
+section h2, section h3 {
+  font-weight: 700;
+}
+
+/* Card Hover Effect */
+.card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Flip Card Container */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 220px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background-color: #f8f9fa;
+}
+
+/* Subject Card */
+.subject-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subject-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Icon Circle */
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7f1ff;
+  color: #0061a8;
+}
+
+/* Class Timings Section */
+.bg-light {
+  background-color: #f4f6fa !important;
+}
+
+.border-primary {
+  border-color: #0061a8 !important;
+}
+
+.text-primary {
+  color: #0061a8 !important;
+}
+
+.text-secondary {
+  color: #6c757d !important;
+}
+/* Import a nice Google Font - add in <head> of your HTML */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.subjects h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.75rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  color: #0d6efd; /* Bootstrap primary */
+  text-align: center;
+  position: relative;
+  margin-bottom: 3rem;
+  padding-bottom: 0.5rem;
+  text-shadow: 0 2px 6px rgba(13, 110, 253, 0.15);
+  cursor: default;
+}
+
+/* Clean underline effect */
+.subjects h3 .underline-highlight {
+  width: 70px;
+  height: 5px;
+  background: linear-gradient(90deg, #0d6efd, #4dabf7);
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+  box-shadow: 0 0 6px #4dabf7;
+  transition: width 0.4s ease;
+}
+
+/* On hover, subtle underline expansion */
+.subjects h3:hover .underline-highlight {
+  width: 100px;
+}
+
+/* Fade-in for the row container */
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: style subject cards' text */
+.subject-card h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #212529;
+  margin-bottom: 0.25rem;
+}
+
+.subject-card p {
+  color: #495057;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.subject-card .badge {
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+    /* Navbar */
+    .navbar-brand {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #f8f9fa !important;
+    }
+    .navbar-nav .nav-link {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: #f1f3f5;
+      transition: color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: #ffd43b;
+      font-weight: 700;
+    }
+    .navbar {
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.12);
+    }
+    
+  
